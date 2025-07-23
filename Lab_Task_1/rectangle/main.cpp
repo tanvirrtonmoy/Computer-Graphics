@@ -7,13 +7,11 @@ void display() {
     // ✅ Thicker border
     glLineWidth(5.0f);
 
-    // Set color to black
-    glColor3f(0.0f, 0.0f, 0.0f);
+
 
     // Draw rectangle outline
-
-
     glBegin(GL_LINE_LOOP);
+    glColor3f(0.0f, 0.0f, 0.0f);
     glVertex2f(1.0f, 1.0f);   // Bottom-left
     glVertex2f(4.0f, 1.0f);    // Bottom-right
     glVertex2f(4.0f, 3.0f);     // Top-right
@@ -31,11 +29,10 @@ int main(int argc, char** argv) {
     glutInitWindowPosition(100, 100);
     glutDisplayFunc(display);
 
-    // ✅ Replace init() setup directly here
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // white background
+
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     glMatrixMode(GL_PROJECTION);
-    gluOrtho2D(-7, 7, -7, 7); // coordinate system
-    //gluOrtho2D()
+    gluOrtho2D(-7, 7, -7, 7);
 
     glutMainLoop();
     return 0;

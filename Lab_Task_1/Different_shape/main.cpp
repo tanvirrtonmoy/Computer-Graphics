@@ -69,7 +69,7 @@ int main(int argc, char** argv) {
 
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);  // White background
     glMatrixMode(GL_PROJECTION);
-    gluOrtho2D(-1, 1, -1, 1);             // Normalized coordinates
+    gluOrtho2D(-2, 2, -2, 2);             // Normalized coordinates
 
     glutMainLoop();
     return 0;
